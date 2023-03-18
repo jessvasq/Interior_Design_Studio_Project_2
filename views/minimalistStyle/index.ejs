@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <!-- ============ HEADER ============ -->
+  <%- include ('../partials/header.ejs') %> 
+
+<body>
+    <a id="link" href="/designs/minProjects">Back to Minimalist Design Style</a>
+    
+    <h1>Minimalism Furniture</h1>
+    
+    <p class="prodInf"> 
+        Although many minimalists focus on neutral tones and increasingly rely on white, a deliberate, temperate use of color is also possible.<br>
+        The combination of different textures or the use of large-scale geometric shapes as well as typographic images also bring harmony to a pure, uncluttered environment.<br>
+        * Simple lines <br>
+        * Monochromatic or neutral color palettes <br>
+        * Limited furniture <br>
+        * Limited decorative objects <br>
+        * Storage solutions that keep the space uncluttered <br>
+        * Open floor plans <br>
+        * Natural light <br>
+        </p>
+   
+    <ul>
+        <% for(let i=0; i < minimalists.length; i++) { %>
+
+     <div class="container4" >
+     <div class="img-collage4">
+
+                <a href="/minimalist/<%=minimalists[i].id;%>"><img src="<%=minimalists[i].image;%>"id="imgs4"></a>
+                <a class="product" href="/minimalist/<%=minimalists[i].id; %>">
+                    <%=minimalists[i].title;%></a><br>
+</div>
+</div>
+        <% } %>
+    </ul>
+
+    <a href="/minimalist/new"><button>Add Product</button></a>
+  
+
+     <!-- ============ FOOTER ============ -->
+     <%- include ('../partials/footer.ejs') %>
+
+</body>
+</html>
